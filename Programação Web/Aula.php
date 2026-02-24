@@ -26,6 +26,15 @@ $cor=array("red","green","blue","yellow");
 foreach($cor as $valor){
     echo "$valor <br>";
 }
+//faça um foreach e mostre somente os numeros pares
+$numero=array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
+foreach($numero as $par){
+    if($par%2==0){
+        echo "$par é par";
+    }else{
+        echo"$par não é par";
+    }
+}
 ?>
 
 </body>
