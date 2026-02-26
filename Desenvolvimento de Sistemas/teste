@@ -1,1 +1,39 @@
-alalalalalalla
+
+package meuprojeto;
+public class MeuProjeto {
+    public static void main(String[] args) {
+     /*  System.out.println("Primeiro Programa");
+        int x=5;
+        double y=10;
+        while(x<y){
+            x++;
+            System.out.println(x);
+        }
+        for(int z=0;z<10;z++)
+        {
+            System.out.println("Z é igual a: "+z);
+        }
+        if(x>y){
+            System.out.println("x é maior");
+        }else{
+            System.out.println("y é maior");
+        }
+        do{
+            System.out.println("Oi");
+            x++;
+        }while(x<y); */
+     int gasto=0;
+     gasto=15000+23000+17000;
+     int orcamento=50000;
+     int estouro=gasto-orcamento;
+     if(gasto>50000){
+         System.out.println("O orçamento foi estourado em: "+estouro);}
+     else{
+         System.out.println("O orçamento de: "+gasto+" não estourou");
+     }
+        
+        
+        
+    }
+    
+}
