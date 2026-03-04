@@ -31,6 +31,13 @@ public class MeuProjeto {
      else{
          System.out.println("O orçamento de: "+gasto+" não estourou");
      }
+//sintaxe para input
+        int valor;
+        Scanner teclado;
+        teclado=new Scanner(System.in);
+        System.out.println("Digite um número inteiro: ");
+        valor= teclado.nextInt();
+        System.out.println("Valor lido: "+ valor);
         
         
         
