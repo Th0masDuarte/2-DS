@@ -1,0 +1,30 @@
+package javaapplication1;
+
+import java.util.Scanner;
+/*• Solicite ao usuário que digite um número.
+• Após o usuário informar o número, executar um laço de repetição 
+que exiba a tabuada deste número.
+• Após a exibição da tabuada perguntar ao usuário se ele deseja 
+continua (S/N), depois de ler a resposta do usuário, somete continuar 
+o laço de repetição se ele respondeu <> “N”*/
+public class JavaApplication1 {
+    public static void main(String[] args) {
+        String opcao="s";
+    while(opcao.equals("s")){
+    Scanner teclado=new Scanner(System.in);
+        System.out.println("Digite um número para descobrir sua tabuada");
+        int num1;
+        num1=teclado.nextInt();
+        System.out.println("Digite até qual número vai a tabuada");
+        int num2;
+        num2=teclado.nextInt();
+        for(int tabuada=1;tabuada<=num2;tabuada++){
+            int resultado=num1*tabuada;
+            System.out.println(num1+" vezes "+tabuada+" é igual a: "+resultado);
+        
+    }
+        System.out.println("Você deseja continuar (s para sim e n para não) ");
+        opcao=teclado.next();}
+       
+}
+}
