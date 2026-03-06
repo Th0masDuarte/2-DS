@@ -1,3 +1,4 @@
+//EXERCICIO 1 E 2
 package javaapplication1;
 
 import java.util.Scanner;
@@ -26,5 +27,46 @@ public class JavaApplication1 {
         System.out.println("Você deseja continuar (s para sim e n para não) ");
         opcao=teclado.next();}
        
+}
+}
+
+//EXERCICIO 3
+package javaapplication1;
+
+import java.util.Scanner;
+
+public class JavaApplication1 {
+    public static void main(String[] args) {
+        /*• Solicite ao usuário que digite um número.
+• Após a leitura do numero perguntar ao usuário se ele deseja continua 
+(S/N), depois de ler a resposta do usuário, somete continuar o laço de 
+repetição se ele respondeu <> “N”.
+• Caso ele responder “N” encerrar o laço de repetição exibindo:
+ O maior número digitado
+ O menor número digitado
+ Quantos números fora lido*/
+        Scanner teclado=new Scanner(System.in);
+        int numero;
+         int maior = Integer.MIN_VALUE;
+        int menor = Integer.MAX_VALUE;
+        int contador=0;
+        String resposta;
+        do{
+            contador++;
+            System.out.println("Digite um número: ");
+            numero=teclado.nextInt();
+            if(maior<numero){
+                maior=numero;
+            }
+            if (numero<menor){
+                menor=numero;
+            }
+            
+            System.out.println("Deseja acabar com a repetição? (s ou n)");
+            resposta=teclado.next();
+        }while(resposta.equals("s")|| resposta.equals("S"));
+        System.out.println("Maior número: "+maior);
+        System.out.println("Menor número: "+menor);
+        System.out.println("Quantidade de repetções: "+contador);
 }
 }
