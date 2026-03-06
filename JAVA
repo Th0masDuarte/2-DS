@@ -38,6 +38,23 @@ public class MeuProjeto {
         System.out.println("Digite um número inteiro: ");
         valor= teclado.nextInt();
         System.out.println("Valor lido: "+ valor);
+
+/* this. e public
+    public static class Alunos{
+        String nome;
+        int idade;
+    
+    public Alunos(String nome, int idade){
+    this.nome=nome;
+    this.idade=idade;
+     System.out.println("nome e idade: "+nome+idade);
+    }
+}
+    public static void main(String[] args) {
+    Alunos aluno1=new Alunos("João",18); */
+    }
+
+}
         
         
         
