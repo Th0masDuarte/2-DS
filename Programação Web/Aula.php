@@ -5,7 +5,7 @@
 <h1>My first PHP page</h1>
 
 <?php
-echo 'Hello World!';
+/*echo 'Hello World!';
 $x = 5;
 $y = "John";
 $t = date("H");
@@ -34,6 +34,12 @@ foreach($numero as $par){
     }else{
         echo"$par não é par";
     }
+}*/
+
+if(isset($_GET['aula'])==true){
+  echo "A variavel A existe! E tem valor ". $_GET['aula'];
+}else{
+  echo "A variavel B nao existe";
 }
 ?>
 
