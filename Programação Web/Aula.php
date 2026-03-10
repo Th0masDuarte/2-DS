@@ -41,6 +41,22 @@ if(isset($_GET['aula'])==true){
 }else{
   echo "A variavel B nao existe";
 }
+//JEITO MELHOR DE USAR TABUADA USANDO GET E POST
+<form method="post" action="">
+    tabuada: <input type="number" name="numero">
+    <input type="submit">
+</form>
+<?php
+if(isset($_POST['numero'])){
+    $numero=(int)$_POST['numero'];
+    echo "<h2>Tabuada do $numero </h2>";
+    for($i=1;$i<=12;$i++){
+        $resultado=$numero*$i;
+        echo "$numero x $i = $resultado <br>";
+    }
+   }   else{
+        echo "Informe um número no form acima";
+   }
 ?>
 
 </body>
