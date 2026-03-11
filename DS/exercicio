@@ -68,5 +68,58 @@ repetição se ele respondeu <> “N”.
         System.out.println("Maior número: "+maior);
         System.out.println("Menor número: "+menor);
         System.out.println("Quantidade de repetções: "+contador);
+/* EXERCICIOS LISTA 2
+      Dentro de uma rotina em JAVA criar um programa que:
+• Solicite ao usuário que digite 5 números inteiros.
+• Utilize um laço de repetição para realizar a leitura dos números.
+• Após a leitura dos números, exibir:
+✓ A soma de todos os números digitados.
+✓ A média dos números digitados.
+Dentro de uma rotina em loop criar um programa que:
+• Solicite ao usuário que digite um número inteiro.
+• Verifique se o número digitado é:
+✓ Par
+✓ Ímpar
+• Após exibir o resultado perguntar ao usuário se deseja continuar (S/N).
+• Continuar executando o programa enquanto a resposta for diferente de 'N'.
+Dentro de uma rotina em loop criar um programa que:
+• Solicite ao usuário que digite um número inteiro.
+• Continuar solicitando números enquanto o usuário responder diferente de
+'N'.
+• Ao finalizar o programa exibir:
+✓ Quantidade de números digitados.
+✓ Soma dos números digitados.
+✓ Média dos números digitados  
+//EXERCICIO 1 LISTA 2
+Scanner teclado=new Scanner(System.in);
+int soma=0;
+double media=0.00;
+int num;
+for(int i=0;i<=5;i++){
+    System.out.println("Digite um número inteiro: ");
+    num=teclado.nextInt();
+    soma+=num;
+}
+media=soma/5;
+        System.out.println("soma: "+soma);
+        System.out.println("Média: "+media);*/
+        
+        //EXERCICIO 2
+            Scanner teclado=new Scanner(System.in);
+    String sn ="s";
+    int num;
+    while(!sn.equals("N")){
+        System.out.println("Digite um numero inteiro: ");
+        num=teclado.nextInt();
+        if (num%2==0){
+            System.out.println("È par");
+        }else{
+            System.out.println("è impar");
+        }
+        System.out.println("Deseja continuar? ");
+        sn=teclado.next().toUpperCase();
+        
+    }
 }
 }
+
