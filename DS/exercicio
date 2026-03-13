@@ -145,9 +145,23 @@ while(!senha.equals(tentativa)){
         JOptionPane.showMessageDialog(null, "senha incorreta, tente novamente");
         
     }
+
+}
+//EXERCICIO 3 CONTADOR
+   String text;
+   int contador=1;
+  text=JOptionPane.showInputDialog("Digite um número: ");
+    int limite = Integer.parseInt(text);
+    while(contador<=limite){
+        JOptionPane.showMessageDialog(null,contador);
+        contador++;
+}
+
+
+
 }
 }
-}
+
 
 
 
