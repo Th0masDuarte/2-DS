@@ -134,7 +134,20 @@ while(num!=0){
     }
      soma+=inum;
 }
+//EXERCICIO 2 VERIFICADOR DE SENHA
+String senha="1234";
+String tentativa="";
+while(!senha.equals(tentativa)){
+    tentativa=JOptionPane.showInputDialog("Digite sua senha: ");
+    if(senha.equals(tentativa)){
+        JOptionPane.showMessageDialog(null,"Senha correta");
+    }else{
+        JOptionPane.showMessageDialog(null, "senha incorreta, tente novamente");
+        
+    }
 }
 }
+}
+
 
 
