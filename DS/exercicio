@@ -120,6 +120,21 @@ media=soma/5;
         sn=teclado.next().toUpperCase();
         
     }
+
+        //EXERCICIO 1 PRATICA DE JOptionPane
+int num=1;
+int soma=0;
+String text;
+while(num!=0){
+    text=JOptionPane.showInputDialog("Digite um número: ");
+    int inum = Integer.parseInt(text);
+    if(inum==0){
+        JOptionPane.showMessageDialog(null,"Programa encerrado. "+soma);
+        break;
+    }
+     soma+=inum;
 }
 }
+}
+
 
