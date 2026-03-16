@@ -1,0 +1,110 @@
+/*1) Números pares e ímpares
+Leia 10 números do teclado.
+Conte quantos são pares e quantos são ímpares.
+Imprima: Pares: X, Ímpares: Y.
+2) Soma até 100
+Escreva um programa que calcule a soma de todos os números de 1 a 100.
+Mostre o resultado.
+3) Tabuada de qualquer número
+Leia um número n.
+Imprima a tabuada de n de 1 a 10:
+Ex: 5 x 1 = 5, ..., 5 x 10 = 50.
+4) Inverter string
+Leia uma palavra (String).
+Imprima a palavra ao contrário (sem usar bibliotecas de inversão prontas).
+5) Fibonacci
+Leia um número N.
+Gere os primeiros N termos da sequência de Fibonacci (0,1,1,2,3...).
+6) Verificador de palíndromo
+Leia uma palavra.
+Verifique se é palíndromo (lê igual de frente e de trás).
+Imprima É palíndromo ou Não é palíndromo.
+7) Média e maior número
+Leia 5 números.
+Calcule a média e mostre qual foi o maior número.
+8) Fatorial
+Leia um número inteiro n (ex: 5).
+Calcule n! usando loop.
+Ex: 5! = 120.
+9) Números primos até X
+Leia um número X.
+Imprima todos os números primos entre 2 e X.
+10) Jogo Adivinha
+O programa escolhe um número fixo (ex: 37).
+O usuário tenta adivinhar.
+Diga “maior” ou “menor” até acertar.
+Conte quantas tentativas foram necessárias.  */
+
+public class Main {
+    Scanner teclado=new Scaner (system.in); /* 
+    int contador=0;
+    while(contador<10)
+    contador++;
+    if (contador%2==0){
+        system.out.println("O numero e par");
+    }else{
+        system.out.println("O numero e impar");     
+    }   
+
+}
+// Exercicio 2
+int contador=0;
+int soma=0;
+while(contador<100){
+    contador++;
+    soma+=contador;
+    System.out.println("A soma atual e: "+soma);
+}
+System.out.println("A soma total e: "+soma);
+//
+Scanner teclado=new Scaner (system.in);
+System.out.println("Digite um numeero para fazer a tabuada: ");
+int tabuada=teclado.nextInt();
+for(int i=0;i<tabuada;i++){
+   int resultado=tabuada*i
+   System.out.println(tabuada+" x "+i+" = "+ resultado)
+   String text;
+   String invertida;
+   text=teclado.nextLine();
+    for(int i=text.lenght-1;i>=0;i--){
+        invertida+=text.charAt(i)
+    }
+    System.out.println(invertida)
+int contador;
+System.out.println("Quantos numeros de fibonaci? ")
+contador=teclado.nextInt();
+int numero=0;
+int penultimo=1;
+int proximo=0;
+for(int i=0;i<contador;i++){
+    System.out.println(numero);
+    proximo=numero+penultimo;
+    numero=penultimo;
+    penultimo=proximo;
+}
+String=text;
+text=teclado.nextLine();
+String invertido="";
+for(int i=text.lenght-1;i>=0;i--){
+    invertido+=text.charAt(i);
+}
+if(text.equals(invertido)){
+    System.out.println("e um palindromo.")
+}else{
+    System.out.println("nao e um palindromo.")
+}*/
+int num;
+int soma;
+int maior;
+for(int=i=1;i<=5;i++){
+    num=teclado.nextInt();
+    soma+=num
+    if(i==1||num>maior){
+        maior=num
+    }
+}
+double media=soma/5 ;
+System.out.println("Media: "+media)
+System.out.println("Maior: "+maior)
+
+}
