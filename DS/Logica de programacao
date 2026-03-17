@@ -107,4 +107,12 @@ double media=soma/5 ;
 System.out.println("Media: "+media)
 System.out.println("Maior: "+maior)
 
+        Scanner teclado=new Scanner(System.in);
+        int num=teclado.nextInt();
+        int fatorial=1;
+        for(int i=1;i<=num;i++){
+            fatorial*=i;
+        }
+        System.out.println(num + "! = " + fatorial);
+
 }
