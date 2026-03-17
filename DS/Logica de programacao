@@ -115,4 +115,27 @@ System.out.println("Maior: "+maior)
         }
         System.out.println(num + "! = " + fatorial);
 
+
+        import java.util.Random;
+        Random random=new Random();
+        int secreto=random.nextInt(100);
+        int tentativas=0;
+        int numero=-1;
+        while(numero!=secreto){
+            System.out.print("Digite um número: ");
+        numero=teclado.nextInt();
+        if(numero>secreto){
+            System.out.println("menor");
+            tentativas++;
+            
+        }else{
+            System.out.println("maior");
+            tentativas++;
+           
+        }
+
+        }
+        System.out.println("tentativas totais: "+tentativas);
+        
+  
 }
