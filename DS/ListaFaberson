@@ -1,0 +1,59 @@
+//Exercicio 13
+
+package exercicio.pkg13.jogo.de.adivinhação;
+
+import java.util.Scanner;
+
+public class Exercicio13JogoDeAdivinhação {
+
+    public static void main(String[] args) {
+    
+       Scanner teclado=new Scanner(System.in);
+        int secreto = (int)(Math.random() * 100) + 1;
+        int tentativas=0;
+        int numero=0;
+        while(numero!=secreto){
+            System.out.print("Digite um número: ");
+        numero=teclado.nextInt();
+        tentativas++;
+
+        if(numero>secreto){
+            System.out.println("menor");
+        }else if(numero<secreto){
+            System.out.println("maior");
+        }else{
+            System.out.println("Parabéns! ");
+        }
+        }
+        System.out.println("tentativas totais: "+tentativas);
+    }
+    }
+
+//Exercicio 14 
+
+
+package exercicio14.calculadora.de.imc.com.faixa;
+
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
+
+public class Exercicio14CalculadoraDeIMCComFaixa {
+
+    public static void main(String[] args) {
+        String peso= JOptionPane.showInputDialog("Digite seu peso(ex:70): ");   
+        String altura= JOptionPane.showInputDialog("Digite sua altura(ex:1.75): ");   
+        double peso1=Double.parseDouble(peso);
+        double altura1=Double.parseDouble(altura);
+        double imc=peso1/(altura1*altura1);
+        String imcFormatado=String.format("%.2f", imc);
+        if(imc < 18.5){
+        showMessageDialog(null,"Você está ABAIXO DO PESO, pois seu IMC é: "+imcFormatado);
+        } else if(imc < 25.00){
+        showMessageDialog(null,"Você está NORMAL, pois seu IMC é: "+imcFormatado);
+        } else if(imc < 30.00){
+        showMessageDialog(null,"Você está com SOBREPESO, pois seu IMC é: "+imcFormatado);
+        } else {
+        showMessageDialog(null,"Você está com OBESIDADE, pois seu IMC é: "+imcFormatado);
+        }
+}
+}
