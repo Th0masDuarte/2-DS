@@ -1,5 +1,14 @@
 //Exercicio 13
 
+/*
+* Exercício 13-Jogo de Adivinhação
+* Aluno(a): Thomas Lorenzo Duarte Ferreira
+* RA: 000110182676-9/SP
+* Data: 19/03/2026
+* Disciplina: Desenvolvimento de Sistemas I
+* Professor: Prof. Dr. Faberson Ferrasi
+*/
+
 package exercicio.pkg13.jogo.de.adivinhação;
 
 import java.util.Scanner;
@@ -30,7 +39,14 @@ public class Exercicio13JogoDeAdivinhação {
     }
 
 //Exercicio 14 
-
+/*
+* Exercício 14- Calculadora de IMC com faixa
+* Aluno(a): Thomas Lorenzo Duarte Ferreira
+* RA: 000110182676-9/SP
+* Data: 19/03/2026
+* Disciplina: Desenvolvimento de Sistemas I
+* Professor: Prof. Dr. Faberson Ferrasi
+*/
 
 package exercicio14.calculadora.de.imc.com.faixa;
 
@@ -57,3 +73,104 @@ public class Exercicio14CalculadoraDeIMCComFaixa {
         }
 }
 }
+
+//EXERCICIO 15 
+/*
+* Exercício 15- Contador de Pares e ímpares
+* Aluno(a): Thomas Lorenzo Duarte Ferreira
+* RA: 000110182676-9/SP
+* Data: 19/03/2026
+* Disciplina: Desenvolvimento de Sistemas I
+* Professor: Prof. Dr. Faberson Ferrasi
+*/
+package exercicio15;
+
+import java.util.Scanner;
+
+public class Exercicio15 {
+    public static void main(String[] args) {       
+        Scanner teclado=new Scanner(System.in);
+        String par="";
+        String impar="";
+        int contpar=0;
+        int contimpar=0;
+        for(int i =0;i<10;i++){
+            int numero=teclado.nextInt();
+            if(numero%2==0){
+              par+=numero+" ";
+              contpar++;
+            }else{
+                impar+=numero+" ";
+                contimpar++;
+            }
+        }
+        System.out.println("Total de "+contpar+" Pares: "+par);
+        System.out.println("Total de "+contimpar+" Impares: "+impar);
+    }
+    
+}
+
+//EXERCICIO 16 
+/*
+* Exercício 16 — Sistema de Login com Menu
+* Aluno(a): Thomas Lorenzo Duarte Ferreira
+* RA: 000110182676-9/SP
+* Data: 19/03/2026
+* Disciplina: Desenvolvimento de Sistemas I
+* Professor: Prof. Dr. Faberson Ferrasi
+*/
+package exercicio16;
+
+import javax.swing.JOptionPane;
+
+public class Exercicio16 {
+
+    public static void main(String[] args) {
+            int saldototal=1000;
+            String text;
+        do{
+            String entrada="";
+             entrada = JOptionPane.showInputDialog(null,"1) Consultar saldo\n2) Depositar\n3) Sacar\n4) Sair");
+            System.out.println("Opções: ");
+            System.out.println("1) Consultar saldo");
+            System.out.println("2) Depositar");
+            System.out.println("3) sacar");
+            System.out.println("4) sair");
+            
+          while(!entrada.equals("1") && !entrada.equals("2") && !entrada.equals("3") && !entrada.equals("4")){
+            entrada=JOptionPane.showInputDialog("Opcão incorreta. Qual opção você escolhe?(1 a 4) ");
+          }
+            int opcao=Integer.parseInt(entrada);
+
+            switch(opcao){
+                case 1: 
+                  JOptionPane.showMessageDialog(null,"Seu saldo total é: "+saldototal);
+                    break;
+                case 2:
+                   String deposito=JOptionPane.showInputDialog("Quanto você quer depositar? ");
+                   int depositonum=Integer.parseInt(deposito);
+                   saldototal+=depositonum;
+                   JOptionPane.showMessageDialog(null, "Saldo total: "+saldototal);
+                   break;
+                case 3:
+                String sacar=JOptionPane.showInputDialog("Quanto você quer sacar? ");
+                int sacarnum=Integer.parseInt(sacar);
+                if(sacarnum>saldototal){
+                    JOptionPane.showMessageDialog(null, "Saldo insuficiente. "+saldototal);
+                }else{
+                    saldototal-=sacarnum;
+                     JOptionPane.showMessageDialog(null, "Retirada com sucesso. "+saldototal);        
+                }
+                break;
+                case 4:
+                   JOptionPane.showMessageDialog(null, "Saindo.");  
+                   break;
+            }
+             text=JOptionPane.showInputDialog("Deseja repetir o programa?(s ou n) ").toLowerCase();
+             
+        }while(text.equals("s"));
+        }
+    }
+    
+
+
