@@ -171,6 +171,44 @@ public class Exercicio16 {
         }while(text.equals("s"));
         }
     }
-    
+
+//EXERCICIO 17
+/*
+* Exercício 17-Fatorial com validação
+* Aluno(a): Thomas Lorenzo Duarte Ferreira
+* RA: 000110182676-9/SP
+* Data: 19/03/2026
+* Disciplina: Desenvolvimento de Sistemas I
+* Professor: Prof. Dr. Faberson Ferrasi
+*/
+package exercicio17;
+
+import java.util.Scanner;
+
+public class Exercicio17 {
+
+    public static void main(String[] args) {
+        Scanner teclado=new Scanner(System.in);
+        int numero;
+        long fatorial=1;
+        do{
+        System.out.println("Digite um numero não negativo e menor que 20 para calcular o fatorial: ");
+        numero=teclado.nextInt();
+        }while(numero<0||numero>20);
+        if(numero==0){
+            System.out.println("0! = 1");
+                    }
+        System.out.print(numero+"! = ");
+        for(int i=numero;i>=1;i--){
+            fatorial=fatorial*i; 
+            System.out.print(i);
+            if(i>1){
+                System.out.print(" * "); 
+            }
+        }
+        System.out.print(" = "+fatorial);
+        }
+}
+
 
 
