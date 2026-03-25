@@ -210,5 +210,63 @@ public class Exercicio17 {
         }
 }
 
+        /*
+* Exercício 16 — Sistema de Login com Menu
+* Aluno(a): Thomas Lorenzo Duarte Ferreira
+* RA: 000110182676-9/SP
+* Data: 24/03/2026
+* Disciplina: Desenvolvimento de Sistemas I
+* Professor: Prof. Dr. Faberson Ferrasi
+*/
+
+package exercicio18;
+import javax.swing.JOptionPane;
+public class Exercicio18 {
+
+    public static void main(String[] args) {
+        String text;
+        do{
+        String moeda;
+        final double dolar=5.20;
+        final double euro=6.05;
+        final double libra=7.00;
+       
+        moeda=JOptionPane.showInputDialog(null,"1) dolar\n 2)euro\n 3) Libra\n 4)Sair");
+       String saldotext=JOptionPane.showInputDialog(null,"Digite seu saldo: ");
+        int  saldonum= Integer.parseInt(saldotext);
+        int opcao = Integer.parseInt(moeda);
+        switch(opcao){
+            case 1:
+                saldonum*=dolar;
+                System.out.println("Saldo convertido= "+saldonum+" reais!");
+                JOptionPane.showMessageDialog(null,"Saldo convertido= "+saldonum+" reais!");
+                break;
+                case 2:
+                saldonum*=euro;
+                System.out.println("Saldo convertido= "+saldonum+" reais!");
+                JOptionPane.showMessageDialog(null,"Saldo convertido= "+saldonum+" reais!");
+                break;
+                case 3:
+                saldonum*=libra;
+                System.out.println("Saldo convertido= "+saldonum+" reais!");
+                JOptionPane.showMessageDialog(null,"Saldo convertido= "+saldonum+" reais!");
+                break;
+                case 4:
+                break;
+                default:
+                System.out.println("Opção inválida! ");
+                JOptionPane.showMessageDialog(null,"Opção inválida!");
+                break;
+            }
+         text=JOptionPane.showInputDialog("Deseja repetir o programa?(s ou n) ").toLowerCase();
+             
+        }while(text.equals("s"));
+}
+    }
+    
+    
+
+
+
 
 
