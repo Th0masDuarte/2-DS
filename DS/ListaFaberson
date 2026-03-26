@@ -211,7 +211,7 @@ public class Exercicio17 {
 }
 
         /*
-* Exercício 16 — Sistema de Login com Menu
+* Exercício 18 — Conversos de moedas multiplos
 * Aluno(a): Thomas Lorenzo Duarte Ferreira
 * RA: 000110182676-9/SP
 * Data: 24/03/2026
@@ -263,6 +263,47 @@ public class Exercicio18 {
         }while(text.equals("s"));
 }
     }
+
+//EXERCICIO 19
+
+/*
+* Exercício 19— Geração de padrão com asterisco
+* Aluno(a): Thomas Lorenzo Duarte Ferreira
+* RA: 000110182676-9/SP
+* Data: 26/03/2026
+* Disciplina: Desenvolvimento de Sistemas I
+* Professor: Prof. Dr. Faberson Ferrasi
+*/
+package exercicio19;
+
+import java.util.Scanner;
+
+public class Exercicio19 {
+
+    public static void main(String[] args) {
+        Scanner teclado=new Scanner(System.in);
+        System.out.println("Digite o numero de linhas (minimo 2): ");
+        int tamanho=teclado.nextInt();
+        System.out.println();
+        for (int i=1;i<=tamanho;i++){
+            for(int a=1;a<=i;a++){
+                System.out.print("*");
+            }
+        
+            System.out.println();
+        }
+            for (int j=tamanho;j>=1;j--){
+            for(int b=1;b<=j;b++){
+                System.out.print("*");
+            }
+            
+                System.out.println();
+            }
+                    
+        
+    }
+    
+}
     
     
 
