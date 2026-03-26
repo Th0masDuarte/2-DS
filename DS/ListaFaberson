@@ -304,6 +304,63 @@ public class Exercicio19 {
     }
     
 }
+
+//EXERCICIO 20
+
+package exercicio20;
+import java.util.Scanner;
+import javax.swing.JOptionPane;
+
+public class EXERCICIO20 {
+
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Digite a quantidade de alunos: ");
+        int quantidade = teclado.nextInt();
+        teclado.nextLine(); 
+        int aprovados = 0;
+        int exame = 0;
+        int reprovados = 0;
+        System.out.println(" RELATÓRIO DE ALUNOS ");
+        for (int i = 1; i <=quantidade; i++) {
+            System.out.println("Aluno " + i + ":");
+            System.out.print("Nome: ");
+            String nome = teclado.nextLine();
+            System.out.print("Nota 1: ");
+            double nota1 = teclado.nextDouble();
+            System.out.print("Nota 2: ");
+            double nota2 = teclado.nextDouble();
+            teclado.nextLine(); 
+            double media = (nota1 + nota2) / 2;
+            String status;
+            if (media >= 7.0) {
+                status = "Aprovado";
+                aprovados++;
+            } else if (media >= 4.0) {
+                status = "Exame";
+                exame++;
+            } else {
+                status = "Reprovado";
+                reprovados++;
+            }
+            System.out.println("Nome: "+nome);
+            System.out.println("status: "+status);
+            System.out.println("Média: "+media);
+        }
+        System.out.println("RESUMO");
+        System.out.println("Aprovados : "+aprovados);
+        System.out.println("Exame : "+ exame);
+        System.out.println("Reprovados : "+ reprovados);
+        String mensagem = "Resumo Final:\n"
+                + "Aprovados : " + aprovados + "\n"
+                + " Exame: " + exame + "\n"
+                + " Reprovados: " + reprovados;
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
+
+    }
+    
+
     
     
 
