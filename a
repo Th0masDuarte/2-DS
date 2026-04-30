@@ -1,26 +1,24 @@
-
 @startuml
 left to right direction
 
-actor Recepcionista
-actor Medico
+actor Cliente
+actor "Atendente de Logística" as Atendente
 
-rectangle "Sistema VidaSaúde" {
+rectangle "Sistema TechStore" {
 
-    usecase "Realizar Atendimento" as Atendimento
-    usecase "Cadastrar Convênio Médico" as Convenio
-    usecase "Solicitar Estacionamento VIP" as VIP
+  usecase "Realizar Login" as UC_Login
+  usecase "Finalizar Compra" as UC_Compra
+  usecase "Consultar Status do Pedido" as UC_Status
+  usecase "Atualizar Rastreamento" as UC_Rastreamento
 
-    usecase "Emitir Receita Digital" as Receita
-    usecase "Gerar Alerta de Retenção" as Alerta
+  Cliente --> UC_Compra
+  Cliente --> UC_Status
 
-    Recepcionista --> Atendimento
-    Medico --> Receita
+  Atendente --> UC_Rastreamento
 
-    Convenio ..> Atendimento : <<extend>>
-    VIP ..> Atendimento : <<extend>>
-
-    Alerta ..> Receita : <<extend>>
+  UC_Compra ..> UC_Login : <<include>>
+  UC_Status ..> UC_Login : <<include>>
+  UC_Rastreamento ..> UC_Login : <<include>>
 }
 
 @enduml
