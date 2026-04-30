@@ -1,0 +1,56 @@
+
+@startuml
+left to right direction
+
+actor Cliente
+actor "Atendente de Logística" as Logistica
+
+rectangle "Sistema TechStore" {
+
+    usecase "Realizar Login" as Login
+    usecase "Finalizar Compra" as Compra
+    usecase "Consultar Status do Pedido" as Status
+    usecase "Atualizar Rastreamento" as Rastreamento
+
+    Cliente --> Compra
+    Cliente --> Status
+
+    Logistica --> Rastreamento
+
+    Compra ..> Login : <<include>>
+    Status ..> Login : <<include>>
+    Rastreamento ..> Login : <<include>>
+}
+
+@enduml
+
+
+
+
+
+
+@startuml
+left to right direction
+
+actor Recepcionista
+actor Medico
+
+rectangle "Sistema VidaSaúde" {
+
+    usecase "Realizar Atendimento" as Atendimento
+    usecase "Cadastrar Convênio Médico" as Convenio
+    usecase "Solicitar Estacionamento VIP" as VIP
+
+    usecase "Emitir Receita Digital" as Receita
+    usecase "Gerar Alerta de Retenção" as Alerta
+
+    Recepcionista --> Atendimento
+    Medico --> Receita
+
+    Convenio ..> Atendimento : <<extend>>
+    VIP ..> Atendimento : <<extend>>
+
+    Alerta ..> Receita : <<extend>>
+}
+
+@enduml
