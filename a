@@ -24,33 +24,3 @@ rectangle "Sistema TechStore" {
 
 @enduml
 
-
-
-
-
-
-@startuml
-left to right direction
-
-actor Recepcionista
-actor Medico
-
-rectangle "Sistema VidaSaúde" {
-
-    usecase "Realizar Atendimento" as Atendimento
-    usecase "Cadastrar Convênio Médico" as Convenio
-    usecase "Solicitar Estacionamento VIP" as VIP
-
-    usecase "Emitir Receita Digital" as Receita
-    usecase "Gerar Alerta de Retenção" as Alerta
-
-    Recepcionista --> Atendimento
-    Medico --> Receita
-
-    Convenio ..> Atendimento : <<extend>>
-    VIP ..> Atendimento : <<extend>>
-
-    Alerta ..> Receita : <<extend>>
-}
-
-@enduml
